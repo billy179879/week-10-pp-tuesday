@@ -6,10 +6,26 @@ class Queue {
         this.head = null;
         this.tail = null;
         this.length = 0;
+        
     }
 
     enqueue(val) {
-        // Add node to end of queue (linked list)
+        const newNode = new SinglyLinkedNode(val);
+       
+
+        if(this.head === this.tail) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.tail.next = newNode;
+        }
+        this.tail = newNode;
+        this.length++;
+
+       
+
+       
+
 
         // Your code here
 
